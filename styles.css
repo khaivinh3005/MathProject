@@ -1,0 +1,110 @@
+.container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px 20px;
+    background-image: url("https://images.unsplash.com/photo-1542822223-606661cf0a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60");
+}
+
+input {
+    width: 70%;
+    border-radius: 5px;
+    border: 0.1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.content {
+    position: relative;
+}
+
+#numberFirst ,
+#numberSecond ,
+#numInt{
+    display: none;
+}
+/* .icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+} */
+
+input:focus , button:focus {
+    outline: 0;
+}
+
+#btnNumber,
+#btnRemoveNumber {
+    border-radius: 20px !important;
+    font-size: 15px !important;
+    padding: 15px !important;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.content__item {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content__result{
+    height: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.6s ease;
+}
+
+.content__result button {
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.content__result p,
+.content__result.new p {
+    height: 0px;
+    width: 100%;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fa-chevron-up ,
+.active .fa-chevron-down {
+    display: none;
+}
+
+.active .fa-chevron-up {
+    display: block;
+}
+
+
+.active .content__result{
+    background: white;
+    height: 200px;
+}
+
+.active .content__result p {
+    height: 50px;
+    line-height: 50px;
+    opacity: 1;
+    background-color: #cce5ff;
+}
+
+
+.active .content__result.new p {
+    height: 30px;
+    line-height: 30px;
+    opacity: 1;
+    background-color: #cce5ff;
+}
+
+.active .content__result button
+ {
+    opacity: 1;
+}
+
+.active #numberFirst ,
+.active #numberSecond,
+.active #numInt {
+    display: inline-block;
+}
+
